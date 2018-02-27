@@ -1,18 +1,30 @@
 # docker-node-example
 Node js Hello World app using Docker
 
-To build a container:
+Building your image:
 
-$ make build
+$ docker build -t <your username>/docker-node-example
 
-Following command will start Docker image in background
+List Images :
 
-$ make run
+$ docker images
 
-you can test it with:
+Run the image:
 
-$ make test
+$ docker run -p 49160:8080 -d <your username>/docker-node-example
 
-or simply run:
+# Get container ID
+$ docker ps
 
-curl -v localhost:43567
+# Print app output
+$ docker logs <container id>
+
+Test :
+
+To test your app, get the port of your app that Docker mapped:
+
+$ docker ps
+
+Run  (install if needed via: sudo apt-get install curl):
+
+$ curl -i localhost:49160
