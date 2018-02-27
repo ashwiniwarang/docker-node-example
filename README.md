@@ -19,12 +19,12 @@ $ docker ps
 # Print app output
 $ docker logs <container id>
 
-Test :
+# Test :
 
 To test your app, get the port of your app that Docker mapped:
 
 $ docker ps
 
-Run  (install if needed via: sudo apt-get install curl):
+# Run  (install if needed via: sudo apt-get install curl):
 
 $ curl -i localhost:49160
